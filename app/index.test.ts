@@ -33,6 +33,7 @@ describe("POST /messages", () => {
   });
 });
 
+
 describe("GET /messages", () => {
   it("responds with all messages", async () => {
     await client.lPush(LIST_KEY, ["msg1", "msg2"]);
