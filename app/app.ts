@@ -19,7 +19,7 @@ export const createApp = (client: RedisClient) => {
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
-    app.get("/fibonacci:n", (req, res) => {
+    app.get("/fibonacci/:n", (req, res) => {
         const n = parseInt(req.params.n, 10);
         const result = fibonacci(n);
         res.send(`Fibonacci(${n}) = ${result}`)
